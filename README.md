@@ -1,7 +1,11 @@
 # api-website
+We are building the free API website for development purpose.
 
-Add the .env and add your MONGO_URI
+Create the .env and add your MONGO_URI
 
 # Install the Backend Dependencies
-# Backend deps
+Backend deps
 npm install
+
+# Run the Server
+npm run server
