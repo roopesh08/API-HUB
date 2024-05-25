@@ -59,7 +59,11 @@ const updateGoal = asyncHandler(async (req, res) => {
   // })
 
   // res.status(200).json(updatedGoal)
-  res.status(200).json(req.query)
+  if(!req.body.text){
+    res.status(400)
+    throw new Error('Please add the text')
+  }
+  res.status(200).json({message:'Set Goal'})
 })
 
 // @desc    Delete goal
