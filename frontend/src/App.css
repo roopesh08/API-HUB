@@ -1,0 +1,29 @@
+.app {
+  font-family: Arial, sans-serif;
+  padding: 0%;
+  margin: 0%;
+}
+
+.main-container {
+  display: flex;
+}
+
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.category-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+.category-card h2 {
+  margin-top: 0;
+}

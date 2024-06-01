@@ -1,0 +1,23 @@
+.sidebar {
+    width: 300px;
+    padding: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: #ebe4e4;
+    text-decoration: none;
+}
+
+/* .toggle-button {
+    margin-top: 20px;
+} */
