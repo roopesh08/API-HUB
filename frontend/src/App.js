@@ -3,6 +3,7 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import CategoryCard from './CategoryCard';
 import CategoryPage from './CategoryPage.js';
+//import CategoryEndpointsPage from './CategoryEndpointsPage';
 import Footer from './Footer';
 import './App.css';
 import './Header.css';
@@ -14,22 +15,102 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
     const categories = [
-        { title: 'Sports', description: 'APIs that encompass various sports-related data...' },
-        { title: 'Finance', description: 'Finance APIs offer users diverse datasets and insights...' },
-        { title: 'Data', description: 'Data APIs provide access to a wide range of datasets...' },
-        { title: 'Entertainment', description: 'APIs for entertainment including movies, music, and games...' },
-        { title: 'Travel', description: 'Travel APIs for booking, information, and reviews...' },
-        { title: 'Location', description: 'Location-based APIs for maps and geolocation services...' },
-        { title: 'Science', description: 'APIs providing scientific data and services...' },
-        { title: 'Food', description: 'APIs for food-related information, recipes, and nutrition...' },
-        { title: 'Tools', description: 'APIs offering various tools and utilities...' },
-        { title: 'Text Analysis', description: 'APIs for text analysis and natural language processing...' },
-        { title: 'Weather', description: 'APIs providing weather forecasts and data...' },
-        { title: 'Gaming', description: 'APIs for game-related data and services...' },
-        { title: 'SMS', description: 'APIs for sending and receiving SMS messages...' },
-        { title: 'Events', description: 'APIs for event information and management...' },
-        { title: 'Health and Fitness', description: 'APIs for health and fitness data...' },
-        { title: 'Payments', description: 'APIs for handling digital payments and transactions...' }
+        { title: 'Sports', description: 'APIs that encompass various sports-related data...' ,
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Finance', description: 'Finance APIs offer users diverse datasets and insights...',
+            endpoints: [
+                { name: '/GetSurges', description: 'Data about football matches...' },
+                { name: '/GetCompanies', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Data', description: 'Data APIs provide access to a wide range of datasets...' ,
+            endpoints: [
+                { name: '/GetWeatherData', description: 'Data about football matches...' },
+                { name: '/GetSampleData', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Entertainment', description: 'APIs for entertainment including movies, music, and games...' ,
+            endpoints: [
+                { name: '/GetMovies', description: 'Data about football matches...' },
+                { name: '/GetHits', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Travel', description: 'Travel APIs for booking, information, and reviews...',
+            endpoints: [
+                { name: '/GetFlights', description: 'Data about football matches...' },
+                { name: '/GetReviews', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Location', description: 'Location-based APIs for maps and geolocation services...',
+            endpoints: [
+                { name: '/GetStreetNames', description: 'Data about football matches...' },
+                { name: '/GetSpeedL<imits', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Science', description: 'APIs providing scientific data and services...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Food', description: 'APIs for food-related information, recipes, and nutrition...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Tools', description: 'APIs offering various tools and utilities...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Text Analysis', description: 'APIs for text analysis and natural language processing...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Weather', description: 'APIs providing weather forecasts and data...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Gaming', description: 'APIs for game-related data and services...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'SMS', description: 'APIs for sending and receiving SMS messages...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Events', description: 'APIs for event information and management...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Health and Fitness', description: 'APIs for health and fitness data...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        },
+        { title: 'Payments', description: 'APIs for handling digital payments and transactions...',
+            endpoints: [
+                { name: '/GetUsers', description: 'Data about football matches...' },
+                { name: '/GetTeams', description: 'Data about basketball games...' }
+            ]
+        }
     ];
 
     return (
@@ -59,6 +140,8 @@ const App = () => {
                                 key={index}
                                 path={`/${category.title.toLowerCase().replace(/ /g, '-')}`}
                                 element={<CategoryPage title={category.title} description={category.description} />}
+                                
+                                
                             />
                         ))}
                     </Routes>
