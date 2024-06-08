@@ -1,39 +1,29 @@
 .category-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: calc(33% - 40px);
-    box-sizing: border-box;
-    background-color: rgb(63,63,70,1);
-    cursor: pointer;
-    color: #ffffff;
+  display: block; /* Ensure the Link takes up the full space */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit the text color */
+  background-color: #ffffff; /* Ensure the background color is white */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
 }
 
+.category-card:hover {
+  background-color: #f0f0f0; /* Optional hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+}
 
 .category-card h2 {
-    margin-top: 0;
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 10px;
 }
 
 .category-card p {
-    margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0;
 }
-
-.category-card a {
-    text-decoration: none;
-}
-
-
-.category-card:hover {
-    transition: 0.3s ease-in-out;
-    background-color: rgb(21, 23, 23);
-    p {
-      transition: all 0.3s ease-out;
-      color: rgba(255, 255, 255, 0.8);
-    }
-    h2 {
-      transition: all 0.3s ease-out;
-      color: #ffffff;
-    }
-  }
-  

@@ -2,12 +2,15 @@ import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import CategoryCard from './CategoryCard';
+import CategoryPage from './CategoryPage.js';
 import Footer from './Footer';
 import './App.css';
 import './Header.css';
 import './SideBar.css';
 import './CategoryCard.css';
 import './Footer.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 const App = () => {
     const categories = [
@@ -30,23 +33,43 @@ const App = () => {
     ];
 
     return (
-        <div className="app">
-            <Header />
-            <div className="main-container">
-                <Sidebar links={categories.map(category => category.title)} />
-                <section className="categories-grid">
-                    {categories.map((category, index) => (
-                        <CategoryCard
-                            key={index}
-                            title={category.title}
-                            description={category.description}
+
+        <Router>
+            <div className="app">
+                <Header />
+                <div className="main-container">
+                    <Sidebar links={categories.map(category => category.title)} />
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <section className="categories-grid">
+                                    {categories.map((category, index) => (
+                                        <CategoryCard
+                                            key={index}
+                                            title={category.title}
+                                            description={category.description}
+                                        />
+                                    ))}
+                                </section>
+                            }
                         />
-                    ))}
-                </section>
+                        {categories.map((category, index) => (
+                            <Route
+                                key={index}
+                                path={`/${category.title.toLowerCase().replace(/ /g, '-')}`}
+                                element={<CategoryPage title={category.title} description={category.description} />}
+                            />
+                        ))}
+                    </Routes>
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </Router>
+       
     );
 };
+
+
 
 export default App;
