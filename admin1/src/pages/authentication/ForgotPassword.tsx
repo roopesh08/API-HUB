@@ -26,7 +26,7 @@ const ForgotPassword = () => {
     >
       <Stack width={{ md: 0.5 }} m={2.5} gap={10}>
         <Link href="/" width="fit-content">
-          <Image src={logo} width={82.6} />
+          <Image src='' width={82.6} />
         </Link>
         <Stack alignItems="center" gap={6.5} width={330} mx="auto">
           <Typography variant="h3">Forgot Password</Typography>

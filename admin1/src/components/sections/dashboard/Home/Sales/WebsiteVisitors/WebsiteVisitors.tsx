@@ -8,16 +8,16 @@ const WebsiteVisitors = (): ReactElement => {
   const theme = useTheme();
 
   const seriesData: PieDataItemOption[] = [
-    { value: 6840, name: 'Direct' },
-    { value: 3960, name: 'Organic' },
-    { value: 2160, name: 'Paid' },
+    { value: 6840, name: 'Sports' },
+    { value: 3960, name: 'News' },
+    { value: 2160, name: 'Location' },
     { value: 5040, name: 'Social' },
   ];
 
   const legendData = [
-    { name: 'Direct', icon: 'circle' },
-    { name: 'Organic', icon: 'circle' },
-    { name: 'Paid', icon: 'circle' },
+    { name: 'Sports', icon: 'circle' },
+    { name: 'News', icon: 'circle' },
+    { name: 'Location', icon: 'circle' },
     { name: 'Social', icon: 'circle' },
   ];
 

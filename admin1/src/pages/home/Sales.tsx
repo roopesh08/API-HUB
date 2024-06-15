@@ -33,12 +33,12 @@ const Sales = (): ReactElement => {
       {/* <Grid xs={12} md={8}>
         <Revenue />
       </Grid> */}
-      {/* <Grid xs={12} md={4}>
+      <Grid xs={12} md={4}>
         <WebsiteVisitors />
-      </Grid> */}
-      <Grid xs={12} lg={8}>
-        <TopSellingProduct />
       </Grid>
+      {/* <Grid xs={12} lg={8}>
+        <TopSellingProduct />
+      </Grid> */}
       <Grid xs={12} lg={4}>
         <Stack
           direction={{ xs: 'column', sm: 'row', lg: 'column' }}
@@ -47,7 +47,7 @@ const Sales = (): ReactElement => {
           width={1}
         >
           <NewCustomers />
-          <BuyersProfile />
+          {/* <BuyersProfile /> */}
         </Stack>
       </Grid>
     </Grid>

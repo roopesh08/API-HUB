@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 
 import IconifyIcon from 'components/base/IconifyIcon';
-import logo from 'assets/logo/elegant-logo.png';
+import logo from 'assets/logo/apihub-icon.png';
 import Image from 'components/base/Image';
 import navItems from 'data/nav-items';
 import NavButton from './NavButton';
@@ -37,14 +37,14 @@ const Sidebar = (): ReactElement => {
         sx={{
           position: 'fixed',
           zIndex: 5,
-          mt: 6.25,
+          mt: 1.25,
           mx: 4.0625,
           mb: 3.75,
           bgcolor: 'background.paper',
           borderRadius: 5,
         }}
       >
-        <Image src={logo} width={1} />
+        <Image src='' width={1} />
       </Link>
       <Stack
         justifyContent="space-between"
