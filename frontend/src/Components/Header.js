@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css'; // Correct relative path
+import '../Styling/Header.css'; // Correct relative path
 
 const Header = () => {
   return (
