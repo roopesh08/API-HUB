@@ -1,5 +1,5 @@
 import React from 'react';
-import './CategoryPage.css';
+import '../Styling/CategoryPage.css';
 
 const CategoryPage = ({ title, description }) => {
     return (

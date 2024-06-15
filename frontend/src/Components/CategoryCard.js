@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './CategoryCard.css';
+import '../Styling/CategoryCard.css';
 
 const CategoryCard = ({ title, description }) => {
     const linkPath = `/${title.toLowerCase().replace(/ /g, '-')}`;
