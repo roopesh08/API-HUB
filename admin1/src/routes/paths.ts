@@ -1,6 +1,6 @@
 export const rootPaths = {
   homeRoot: '',
-  pagesRoot: 'pages',
+  // pagesRoot: 'pages',
   applicationsRoot: 'applications',
   ecommerceRoot: 'ecommerce',
   authRoot: 'authentication',
