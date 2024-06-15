@@ -13,7 +13,7 @@ import {
 } from '@mui/material';
 import loginBanner from 'assets/authentication-banners/login.png';
 import IconifyIcon from 'components/base/IconifyIcon';
-import logo from 'assets/logo/elegant-logo.png';
+// import logo from 'assets/logo/elegant-logo.png';
 import Image from 'components/base/Image';
 
 const Login = (): ReactElement => {

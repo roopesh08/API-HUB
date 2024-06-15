@@ -141,7 +141,8 @@ const NavButton = ({ navItem, Link }: NavItemProps): ReactElement => {
           </ListItemIcon>
           <ListItemText>{navItem.title}</ListItemText>
         </ListItemButton>
-      )}
+      )
+      }
     </ListItem>
   );
 };
