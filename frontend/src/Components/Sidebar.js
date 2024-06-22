@@ -6,7 +6,8 @@ const Sidebar = ({ links }) => {
     <li key={index}><a href="#">{link}</a></li>
     ))}
     </ul>
-    {/* <button className="toggle-button">Toggle Light/Dark Mode</button> */}
+    <button className="toggle-button">Toggle Light/Dark Mode</button>
+
     </aside>
     );
     };
