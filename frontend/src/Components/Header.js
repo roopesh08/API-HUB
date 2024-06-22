@@ -4,7 +4,7 @@ import '../Styling/Header.css'; // Correct relative path
 const Header = () => {
   return (
     <div className='header-conatiner'>
-      {/* <div className='header-logo'> API-HUB</div> */}
+      <div className='header-logo'> API-HUB</div>
     <center>
             <div id='search-box' itemprop='mainEntity' itemscope='itemscope' itemtype='https://schema.org/WebSite'>
             <form action='/search' id='search-fs' itemprop='potentialAction' itemscope='itemscope' itemtype='https://schema.org/SearchAction' method='get' query-input='required'>
