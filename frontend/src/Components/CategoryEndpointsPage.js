@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CategoryEndpointsPage.css';
+import '../Styling/CategoryEndpointsPage.css';
 
 const CategoryEndpointsPage = ({ category }) => {
     const [selectedEndpoint, setSelectedEndpoint] = useState(null);
