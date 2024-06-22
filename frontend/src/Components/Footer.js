@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'; // Correct relative path
+import '../Styling/Footer.css'; // Correct relative path
 
 const Footer = () => {
   return (
